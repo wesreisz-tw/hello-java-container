@@ -9,7 +9,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 # Use an official OpenJDK image as the base image
 FROM openjdk:17.0.1-jdk-slim
-FROM amazoncorretto:17-alpine-jdk
+#FROM amazoncorretto:17-alpine-jdk
 # Set the working directory in the container
 WORKDIR /app
 # Copy the built JAR file from the previous stage to the container
