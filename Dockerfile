@@ -14,5 +14,6 @@ FROM openjdk:17.0.1-jdk-slim
 WORKDIR /app
 # Copy the built JAR file from the previous stage to the container
 COPY --from=build "/app/target/demo-0.0.1-SNAPSHOT.jar" .
+EXPOSE 8080
 # Set the command to run the application
 CMD ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
